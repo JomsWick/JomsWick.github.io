@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jom's Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#home"><img src="img/JA.png" alt="" class="logo"></a>
+        <img src="icons/icon-menu.png" alt="" id="menu-icon">
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-container">
+            <div class="home-content">
+                <h5>Hello!</h5>
+                <h1>Jomel A. Ang</h1>
+                <h3>I'm a <span id="text"></span><span id="cursor">|</span></h3>
+                <p>Passionate and skilled in 
+                    web development, web design, UI/UX, and graphic design, 
+                    I bring websites to life with optimal functionality. 
+                    My expertise extends to creating visually stunning designs 
+                    and user-centric interfaces. Proficient in HTML, CSS, JavaScript, 
+                    and design tools, I thrive in collaborative environments and 
+                    stay updated on industry trends. 
+                    Let's connect and innovate together!
+                </p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/jomswick/" class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="https://github.com/JomsWick" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="https://join.skype.com/invite/rSCvsjoEE1bJ" class="fa-brands fa-skype" target="_blank" rel="noopener noreferrer"></a>
+                    <a href="mailto:jaang20@gmail.com" class="fa-brands fa-telegram" target="_blank" rel="noopener noreferrer"></a>
+                </div>
+    
+                <a href="docs/RESUME- Jomel A Ang.pdf" target="_blank">
+                    <button id="view-cv">View CV</button>
+                </a>
+            </div>
+            <div class="home-img">
+                <img src="img/Ang, Jomel A.png" alt="" srcset="" width="480px">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="img/it.jpg" alt="joms-anime-wearing-mask" class="about-img2">
+            </div>
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <br><br />
+                <p>🚀 Hello, I'm Joms - Where Creativity Meets Functionality!
+    
+                    Welcome to my digital playground, where I wear multiple hats - Web Developer, UI/UX Designer, Graphic Designer, and Web Designer. I'm on a mission to craft seamless, visually striking digital experiences that resonate and inspire.
+                    <br><br />
+                    💻 Web Development:
+                    In the realm of web development, I bring ideas to life through code, ensuring functionality is as robust as it is seamless. Whether it's HTML, CSS, JavaScript, or diving into the latest frameworks, I thrive on turning concepts into interactive realities.
+                    <br><br />
+                    🎨 Graphic & Web Design:
+                    My passion extends to the visual realm, where I specialize in graphic and web design. From creating captivating visuals to designing intuitive user interfaces, every project is a canvas for innovation and creativity.
+                    <br><br />
+                    🌐 UI/UX Design:
+                    User experience is at the core of what I do. Designing interfaces that not only look good but also feel intuitive and user-friendly is my forte. I'm dedicated to enhancing the journey users embark on when interacting with digital platforms.
+                    <br><br />
+                    🎓 Continuous Learning:
+                    In this ever-evolving landscape, I am committed to staying at the forefront of design and technology trends. Continuous learning isn't just a habit; it's a necessity in delivering cutting-edge solutions.
+                    <br><br />
+                    📸 Beyond the Screen:
+                    When I'm not immersed in pixels and lines of code, you'll find me playing online games.
+                    <br><br />
+                    🤝 Let's Create Together:
+                    Whether you're a business looking to establish a strong online presence, a fellow designer seeking collaboration, or someone with a vision waiting to be brought to life, let's connect and turn ideas into digital masterpieces!
+                    
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <br><br />
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class="fa fa-code"></i>
+                <br><br />
+                <h3>Web Development 🖥️</h3>
+                <br>
+                <p>
+                    Transforming Ideas into Interactive Experiences
+
+                    From dynamic websites to powerful web applications, I specialize in:
+
+                    Front-End Development: Crafting seamless user interfaces using HTML, CSS, and JavaScript.
+                    Back-End Development: Building robust and scalable server-side logic and databases.
+                    Full-Stack Development: Bridging the gap between user experience and server functionality.
+                </p>
+            </div>
+            <div class="skills-box">
+                <i class="fa fa-paint-brush"></i>
+                <br><br />
+                <h3>Web & Graphic Design 🎨</h3>
+                <br>
+                <p>
+                    Bringing Visuals to Life with a Creative Touch
+
+                    In the world of design, I offer:
+
+                    Web Design: Crafting visually appealing layouts and structures for optimal user engagement.
+                    Graphic Design: Creating stunning visuals for branding, marketing collateral, and digital platforms.
+                    Print Design: Designing materials that leave a lasting impression, from business cards to brochures.
+                </p>
+            </div>
+            <div class="skills-box">
+                <i class="fa fa-tools"></i>
+                <br><br />
+                <h3>UI/UX Design 🌐</h3>
+                <br>
+                <p>
+                    Crafting Intuitive and User-Centric Experiences
+
+                    For a seamless user journey, I specialize in:
+
+                    UI Design: Creating visually pleasing and responsive user interfaces.
+                    UX Design: Ensuring a user-centric approach to enhance overall user satisfaction.
+                    Prototyping & Wireframing: Visualizing and refining concepts before development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Work</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="img/project/Vintesse UI UX Figma.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>UI/UX Design <br />Web Design</h4>
+                    <p>Seamlessly combines aesthetics and functionality, 
+                        ensuring visually captivating interfaces, 
+                        intuitive navigation, and engaging interactions 
+                        that prioritize user satisfaction and brand identity.</p>
+                    <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/project/Image from Figma Compilation.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>UI/UX Design <br /> Mobile App Design</h4>
+                    <p>Seamlessly combines form and function, providing visually compelling 
+                        interfaces with intuitive navigation and user-centric layouts. 
+                        Crafted for optimal user experiences across various devices, 
+                        it reflects meticulous attention to brand aesthetics and prioritizes 
+                        accessibility and usability.</p>
+                    <a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/project/Business Card JA.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Graphic Design</h4>
+                    <p>It is an artistic representation, skillfully blending color, typography, 
+                        and imagery to encapsulate a unique visual identity and convey 
+                        contact information with flair, leaving a lasting and memorable impression.</p>
+                    <a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/project/Glossy Logo Mockup JA.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Logo</h4>
+                    <p>is a visually striking representation, strategically crafted to symbolize a 
+                        brand's identity through artistry, shapes, colors, and typography. 
+                        It serves as a powerful and instantly recognizable communicator of 
+                        brand values and uniqueness.</p>
+                    <a href="#portfolio"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/project/T-Shirt MockUp_Back JA.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>T-Shirt</h4>
+                    <p>It is wearable art, creatively designed with color, imagery, and typography 
+                        to turn a blank canvas into a statement piece. It serves as a personal canvas 
+                        for self-expression, combining comfort with creativity and making a visual impact.</p>
+                    <a href="#portfolio"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/project/3D Glass Logo Mockup JA.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>3D Glass Mockup</h4>
+                    <p>It is a preview, digitally or physically crafted, demonstrating how a design will appear 
+                        in its intended context. Through skillful manipulation of colors and layouts, 
+                        it provides a realistic representation, aiding effective decision-making for 
+                        designers and clients.</p>
+                    <a href="#portfolio"><i class="fa fa-external-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <br>
+        <form action="#" id="contact-form">
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn-submit">
+        </form>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by ᴊᴏᴍ | All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
