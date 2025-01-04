@@ -126,3 +126,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownButton = document.querySelector('.dropdown .dropbtn');
+    const dropdownContent = document.querySelector('.dropdown .dropdown-content');
+    const themeSwitch = document.getElementById('theme-switch');
+    const root = document.documentElement;
+
+    dropdownButton.addEventListener('click', function (event) {
+        event.stopPropagation();
+        const isVisible = dropdownContent.style.display === 'block';
+        dropdownContent.style.display = isVisible ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        }
+    });
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', currentTheme);
+    themeSwitch.checked = currentTheme === 'light';
+
+    themeSwitch.addEventListener('change', function () {
+        const newTheme = themeSwitch.checked ? 'light' : 'dark';
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+});

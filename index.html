@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jom's Profile</title>
+    <title>ᴊᴏᴍ</title>
+    <link rel="apple-touch-icon" href="img/JA.jpg">
+    <link rel="icon" href="img/JA.jpg" type="image/x-icon">
+    <link rel="icon" href="img/JA.jpg" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/JA.jpg" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -19,8 +23,18 @@
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="dropdown-toggle" aria-expanded="false"><span class="fa fa-gear"></span></button>
+                <div class="dropdown-content">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         </nav>
     </header>
+
 
     <section class="home" id="home">
         <div class="home-container">
@@ -57,7 +71,7 @@
     <section class="about" id="about">
         <div class="about-container">
             <div class="about-img">
-                <img src="img/it.jpg" alt="joms-anime-wearing-mask" class="about-img2">
+                <img src="img/Jom2.jpg" alt="joms-grad-pictorial" class="about-img2">
             </div>
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
@@ -238,13 +252,113 @@
     </div>
     
     <footer class="footer">
-        <div class="footer-text">
+        <div class="container">
+            <div class="grid-4">
+                <div class="grid-4-col footer-about">
+                    <h3 class="title-sm">About</h3>
+                    <p class="text">
+                    Your website represents my service, and I'm here to elevate it.
+                    </p>
+                </div>
+    
+                <div class="grid-4-col footer-links">
+                    <h3 class="title-sm">Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Services</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="grid-4-col footer-links">
+                    <h3 class="title-sm">Services</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank">Web Design</a>
+                        </li>
+                        <li>
+                            <a href="https://jomswick.github.io/" target="_blank">Web Development</a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects" target="_blank">App Design</a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects" target="_blank">Graphic Design</a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank">UI/UX Design</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="grid-4-col footer-newstletter">
+                    <h3 class="title-sm">Subscribe</h3>
+                    <p class="text">
+                    Subscribe to my website and stay updated with the latest news, offers, and insights!
+                    </p>
+                    <div class="footer-input-wrap">
+                    <input type="email" class="footer-input" placeholder="Email" />
+                    <a href="#" class="input-arrow">
+                        <i class="fas fa-angle-right"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="bottom-footer">
+                <div class="copyright">
+                    <p class="text">
+                    Copyright &copy; 2023 All Rights Reserved | Edited by
+                    <span class="split-text" data-text="FORUM"><a
+                        href="https://www.threads.net/@joms.wick" target="_blank"> ᴊᴏᴍ</a></span>
+                    
+                    </p>
+                </div>
+    
+                <div class="followme-wrap">
+                    <div class="followme">
+                        <h3>Follow me</h3>
+                        <span class="footer-line"></span>
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/joms.wick" target="_blank" class="icon-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/JomsWick" target="_blank" class="icon-social-media">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/joms.wick/" target="_blank" class="icon-social-media">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@joms.wick" target="_blank" class="icon-social-media">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="back-btn-wrap">
+                        <a href="#" class="back-btn">
+                            <i class="fas fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="footer-text">
             <p>Copyright &copy; 2024 by ᴊᴏᴍ | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">
             <a href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
-        </div>
+        </div> -->
     </footer>
 
     <script src="script.js"></script>
