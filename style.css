@@ -681,7 +681,7 @@ section {
     }
 }
 
-@media (min-width: 585px) and (max-width: 768px) {
+@media (min-width: 572px) and (max-width: 768px) {
     .header {
         padding: 0.8rem 2%;
     }
@@ -793,14 +793,14 @@ section {
         font-size: 1.6rem;
     }
 }
-@media (max-height: 585px) and (max-height: 768px) {
+@media (max-height: 572px) and (max-height: 768px) {
     .portfolio-container {
         margin: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 400px) and (max-width: 584px) {
+@media (min-width: 375px) and (max-width: 571px) {
     .header {
         padding: 0.8rem 2%;
     }
@@ -813,7 +813,7 @@ section {
     .navbar {
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 0;
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
@@ -828,8 +828,9 @@ section {
 
     .navbar a {
         display: block;
-        font-size: 2rem;
+        font-size: 1.75rem;
         margin: 3rem 0;
+        right: 0;
     }
 
     .home {
@@ -928,7 +929,7 @@ section {
     }
 }
 
-@media (min-height: 400px) and (max-height: 584px) {
+@media (min-height: 375px) and (max-height: 571px) {
 
 }
 
