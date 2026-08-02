@@ -10,358 +10,649 @@
     <link rel="icon" href="img/JA.jpg" sizes="16x16" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#home"><img src="img/JA.png" alt="" class="logo"></a>
-        <img src="icons/icon-menu.png" alt="" id="menu-icon">
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-            <div class="dropdown">
-                <button class="dropbtn" id="dropdown-toggle" aria-expanded="false"><span class="fa fa-gear"></span></button>
-                <div class="dropdown-content">
-                    <label class="switch">
-                        <input type="checkbox" id="theme-switch">
-                        <span class="slider round"></span>
-                    </label>
+    <a href="#home" class="skip-link">Skip to content</a>
+
+    <!-- ambient code-snippet mockups -->
+    <div class="bg-scene" aria-hidden="true">
+        <div class="bg-aurora"></div>
+
+        <div class="cw-wrap cw-1">
+            <div class="window ghost">
+                <div class="win-bar">
+                    <span class="win-dots"><i></i><i></i><i></i></span>
+                    <span class="win-title">index.js</span>
                 </div>
+                <ol class="code">
+                    <li><span class="t-kw">import</span> <span class="t-cls">React</span> <span class="t-kw">from</span> <span class="t-str">'react'</span></li>
+                    <li></li>
+                    <li><span class="t-kw">const</span> <span class="t-cls">Code</span> <span class="t-punc">= () =&gt; {</span></li>
+                    <li class="i1"><span class="t-kw">return</span> <span class="t-punc">(</span></li>
+                    <li class="i2"><span class="t-punc">&lt;</span><span class="t-tag">div</span><span class="t-punc">&gt;</span>Code Snippet Mockups<span class="t-punc">&lt;/</span><span class="t-tag">div</span><span class="t-punc">&gt;</span></li>
+                    <li class="i1"><span class="t-punc">)</span></li>
+                    <li><span class="t-punc">}</span></li>
+                    <li></li>
+                    <li><span class="t-kw">export default</span> <span class="t-cls">Code</span></li>
+                </ol>
             </div>
-        </nav>
+        </div>
+
+        <div class="cw-wrap cw-2">
+            <div class="window ghost">
+                <div class="win-bar">
+                    <span class="win-dots"><i></i><i></i><i></i></span>
+                    <span class="win-title">style.css</span>
+                </div>
+                <ol class="code">
+                    <li><span class="t-cls">.hero</span> <span class="t-punc">{</span></li>
+                    <li class="i1"><span class="t-tag">display</span><span class="t-punc">:</span> <span class="t-str">grid</span><span class="t-punc">;</span></li>
+                    <li class="i1"><span class="t-tag">place-items</span><span class="t-punc">:</span> <span class="t-str">center</span><span class="t-punc">;</span></li>
+                    <li class="i1"><span class="t-tag">gap</span><span class="t-punc">:</span> <span class="t-str">2rem</span><span class="t-punc">;</span></li>
+                    <li><span class="t-punc">}</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="cw-wrap cw-3">
+            <div class="window ghost">
+                <div class="win-bar">
+                    <span class="win-dots"><i></i><i></i><i></i></span>
+                    <span class="win-title">jom.js</span>
+                </div>
+                <ol class="code">
+                    <li><span class="t-kw">const</span> <span class="t-cls">skills</span> <span class="t-punc">= [</span></li>
+                    <li class="i1"><span class="t-str">'web development'</span><span class="t-punc">,</span></li>
+                    <li class="i1"><span class="t-str">'ui / ux design'</span><span class="t-punc">,</span></li>
+                    <li><span class="t-punc">]</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="bg-veil"></div>
+    </div>
+
+    <!-- editor tab bar -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#home" class="brand">
+                <span class="win-dots"><i></i><i></i><i></i></span>
+                <img src="img/JA.png" alt="" class="logo">
+                <span class="brand-path">~/jomel-ang</span>
+            </a>
+
+            <nav class="navbar">
+                <a href="#home" class="tab active"><i class="tab-dot js"></i>home.js</a>
+                <a href="#about" class="tab"><i class="tab-dot md"></i>about.md</a>
+                <a href="#skills" class="tab"><i class="tab-dot json"></i>skills.json</a>
+                <a href="#portfolio" class="tab"><i class="tab-dot tsx"></i>portfolio.tsx</a>
+                <a href="#contact" class="tab"><i class="tab-dot js"></i>contact.js</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false" title="Toggle light / dark">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+
+                <button id="menu-icon" class="menu-icon" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
     </header>
 
-
-    <section class="home" id="home">
-        <div class="home-container">
-            <div class="home-content">
-                <h5>Hello!</h5>
-                <h1>Jomel A. Ang</h1>
-                <h3>I'm a <span id="text"></span><span id="cursor">|</span></h3>
-                <p>Passionate and skilled in 
-                    web development, web design, UI/UX, and graphic design, 
-                    I bring websites to life with optimal functionality. 
-                    My expertise extends to creating visually stunning designs 
-                    and user-centric interfaces. Proficient in HTML, CSS, JavaScript, 
-                    and design tools, I thrive in collaborative environments and 
-                    stay updated on industry trends. 
-                    Let's connect and innovate together!
-                </p>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/jomswick/" class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer"></a>
-                    <a href="https://github.com/JomsWick" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer"></a>
-                    <a href="https://join.skype.com/invite/rSCvsjoEE1bJ" class="fa-brands fa-skype" target="_blank" rel="noopener noreferrer"></a>
-                    <a href="mailto:jaang20@gmail.com" class="fa-brands fa-telegram" target="_blank" rel="noopener noreferrer"></a>
-                </div>
-    
-                <a href="docs/RESUME- Jomel A Ang.pdf" target="_blank">
-                    <button id="view-cv">View CV</button>
-                </a>
-            </div>
-            <div class="home-img">
-                <img src="img/Ang, Jomel A.png" alt="" srcset="" width="480px">
-            </div>
-        </div>
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-img">
-                <img src="img/Jom2.jpg" alt="joms-grad-pictorial" class="about-img2">
-            </div>
-            <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
-                <br><br />
-                <p>🚀 Hello, I'm Joms - Where Creativity Meets Functionality!
-    
-                    Welcome to my digital playground, where I wear multiple hats - Web Developer, UI/UX Designer, Graphic Designer, and Web Designer. I'm on a mission to craft seamless, visually striking digital experiences that resonate and inspire.
-                    <br><br />
-                    💻 Web Development:
-                    In the realm of web development, I bring ideas to life through code, ensuring functionality is as robust as it is seamless. Whether it's HTML, CSS, JavaScript, or diving into the latest frameworks, I thrive on turning concepts into interactive realities.
-                    <br><br />
-                    🎨 Graphic & Web Design:
-                    My passion extends to the visual realm, where I specialize in graphic and web design. From creating captivating visuals to designing intuitive user interfaces, every project is a canvas for innovation and creativity.
-                    <br><br />
-                    🌐 UI/UX Design:
-                    User experience is at the core of what I do. Designing interfaces that not only look good but also feel intuitive and user-friendly is my forte. I'm dedicated to enhancing the journey users embark on when interacting with digital platforms.
-                    <br><br />
-                    🎓 Continuous Learning:
-                    In this ever-evolving landscape, I am committed to staying at the forefront of design and technology trends. Continuous learning isn't just a habit; it's a necessity in delivering cutting-edge solutions.
-                    <br><br />
-                    📸 Beyond the Screen:
-                    When I'm not immersed in pixels and lines of code, you'll find me playing online games.
-                    <br><br />
-                    🤝 Let's Create Together:
-                    Whether you're a business looking to establish a strong online presence, a fellow designer seeking collaboration, or someone with a vision waiting to be brought to life, let's connect and turn ideas into digital masterpieces!
-                    
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">My <span>Skills</span></h2>
-        <br><br />
-        <div class="skills-container">
-            <div class="skills-box">
-                <i class="fa fa-code"></i>
-                <br><br />
-                <h3>Web Development 🖥️</h3>
-                <br>
-                <p>
-                    Transforming Ideas into Interactive Experiences
-
-                    From dynamic websites to powerful web applications, I specialize in:
-
-                    Front-End Development: Crafting seamless user interfaces using HTML, CSS, and JavaScript.
-                    Back-End Development: Building robust and scalable server-side logic and databases.
-                    Full-Stack Development: Bridging the gap between user experience and server functionality.
-                </p>
-            </div>
-            <div class="skills-box">
-                <i class="fa fa-paint-brush"></i>
-                <br><br />
-                <h3>Web & Graphic Design 🎨</h3>
-                <br>
-                <p>
-                    Bringing Visuals to Life with a Creative Touch
-
-                    In the world of design, I offer:
-
-                    Web Design: Crafting visually appealing layouts and structures for optimal user engagement.
-                    Graphic Design: Creating stunning visuals for branding, marketing collateral, and digital platforms.
-                    Print Design: Designing materials that leave a lasting impression, from business cards to brochures.
-                </p>
-            </div>
-            <div class="skills-box">
-                <i class="fa fa-tools"></i>
-                <br><br />
-                <h3>UI/UX Design 🌐</h3>
-                <br>
-                <p>
-                    Crafting Intuitive and User-Centric Experiences
-
-                    For a seamless user journey, I specialize in:
-
-                    UI Design: Creating visually pleasing and responsive user interfaces.
-                    UX Design: Ensuring a user-centric approach to enhance overall user satisfaction.
-                    Prototyping & Wireframing: Visualizing and refining concepts before development.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Work</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="img/project/Vintesse UI UX Figma.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>UI/UX Design <br />Web Design</h4>
-                    <p>Seamlessly combines aesthetics and functionality, 
-                        ensuring visually captivating interfaces, 
-                        intuitive navigation, and engaging interactions 
-                        that prioritize user satisfaction and brand identity.</p>
-                    <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/project/Image from Figma Compilation.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>UI/UX Design <br /> Mobile App Design</h4>
-                    <p>Seamlessly combines form and function, providing visually compelling 
-                        interfaces with intuitive navigation and user-centric layouts. 
-                        Crafted for optimal user experiences across various devices, 
-                        it reflects meticulous attention to brand aesthetics and prioritizes 
-                        accessibility and usability.</p>
-                    <a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/project/Business Card JA.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Graphic Design</h4>
-                    <p>It is an artistic representation, skillfully blending color, typography, 
-                        and imagery to encapsulate a unique visual identity and convey 
-                        contact information with flair, leaving a lasting and memorable impression.</p>
-                    <a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/project/Glossy Logo Mockup JA.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Logo</h4>
-                    <p>is a visually striking representation, strategically crafted to symbolize a 
-                        brand's identity through artistry, shapes, colors, and typography. 
-                        It serves as a powerful and instantly recognizable communicator of 
-                        brand values and uniqueness.</p>
-                    <a href="#portfolio" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/project/T-Shirt MockUp_Back JA.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>T-Shirt</h4>
-                    <p>It is wearable art, creatively designed with color, imagery, and typography 
-                        to turn a blank canvas into a statement piece. It serves as a personal canvas 
-                        for self-expression, combining comfort with creativity and making a visual impact.</p>
-                    <a href="#portfolio" target="_blank"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="img/project/3D Glass Logo Mockup JA.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>3D Glass Mockup</h4>
-                    <p>It is a preview, digitally or physically crafted, demonstrating how a design will appear 
-                        in its intended context. Through skillful manipulation of colors and layouts, 
-                        it provides a realistic representation, aiding effective decision-making for 
-                        designers and clients.</p>
-                    <a href="#portfolio"><i class="fa fa-external-link"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <br>
-        <form action="#" id="contact-form">
-            <div class="input-box">
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
-            </div>
-            <div class="input-box">
-                <input type="tel" id="phone" name="phone" placeholder="Mobile Number" required>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-            </div>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn-submit">
-        </form>
-    </section>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <p id="modal-message"></p>
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <div class="container">
-            <div class="grid-4">
-                <div class="grid-4-col footer-about">
-                    <h3 class="title-sm">About</h3>
-                    <p class="text">
-                    Your website represents my service, and I'm here to elevate it.
-                    </p>
-                </div>
-    
-                <div class="grid-4-col footer-links">
-                    <h3 class="title-sm">Links</h3>
-                    <ul>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#skills">Services</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-        
-                <div class="grid-4-col footer-links">
-                    <h3 class="title-sm">Services</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank">Web Design</a>
-                        </li>
-                        <li>
-                            <a href="https://jomswick.github.io/" target="_blank">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects" target="_blank">App Design</a>
-                        </li>
-                        <li>
-                            <a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects" target="_blank">Graphic Design</a>
-                        </li>
-                        <li>
-                            <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank">UI/UX Design</a>
-                        </li>
-                    </ul>
-                </div>
-        
-                <div class="grid-4-col footer-newstletter">
-                    <h3 class="title-sm">Subscribe</h3>
-                    <p class="text">
-                    Subscribe to my website and stay updated with the latest news, offers, and insights!
-                    </p>
-                    <div class="footer-input-wrap">
-                    <input type="email" class="footer-input" placeholder="Email" />
-                    <a href="#" class="input-arrow">
-                        <i class="fas fa-angle-right"></i>
-                    </a>
+    <main>
+        <!-- ============================ HOME ============================ -->
+        <section class="home" id="home">
+            <div class="container home-grid">
+                <div class="window home-window reveal">
+                    <div class="win-bar">
+                        <span class="win-dots"><i></i><i></i><i></i></span>
+                        <span class="win-title">jomel-ang.js</span>
+                        <span class="win-meta">JavaScript</span>
                     </div>
-                </div>
-            </div>
-        
-            <div class="bottom-footer">
-                <div class="copyright">
-                    <p class="text">
-                    Copyright &copy; 2023 All Rights Reserved | Edited by
-                    <span class="split-text" data-text="FORUM"><a
-                        href="https://www.threads.net/@joms.wick" target="_blank"> ᴊᴏᴍ</a></span>
-                    
-                    </p>
-                </div>
-    
-                <div class="followme-wrap">
-                    <div class="followme">
-                        <h3>Follow me</h3>
-                        <span class="footer-line"></span>
+
+                    <ol class="code home-code">
+                        <li><span class="t-com">// hello!</span></li>
+                        <li></li>
+                        <li>
+                            <span class="t-kw">const</span> <span class="t-cls">name</span> <span class="t-punc">=</span>
+                            <span class="t-str">'<h1 class="code-h1">Jomel A. Ang</h1>'</span>
+                        </li>
+                        <li>
+                            <span class="t-kw">const</span> <span class="t-cls">role</span> <span class="t-punc">=</span>
+                            <span class="t-str">'<h3 class="code-h3"><span id="text"></span><span id="cursor">▍</span></h3>'</span>
+                        </li>
+                        <li></li>
+                        <li><span class="t-com">/**</span></li>
+                        <li class="i-star"><span class="t-com">*</span>
+                            <p class="t-com bio">Passionate and skilled in web development, web design, UI/UX, and graphic
+                            design, I bring websites to life with optimal functionality. My expertise extends to creating
+                            visually stunning designs and user-centric interfaces. Proficient in HTML, CSS, JavaScript,
+                            and design tools, I thrive in collaborative environments and stay updated on industry trends.
+                            Let's connect and innovate together!</p>
+                        </li>
+                        <li class="i-star"><span class="t-com">*/</span></li>
+                        <li></li>
+                        <li class="wrap-line">
+                            <span class="t-kw">import</span> <span class="t-punc">{</span>
+                            <a class="t-cls link" href="https://www.linkedin.com/in/jomswick/" target="_blank" rel="noopener noreferrer">LinkedIn</a><span class="t-punc">,</span>
+                            <a class="t-cls link" href="https://github.com/JomsWick" target="_blank" rel="noopener noreferrer">GitHub</a><span class="t-punc">,</span>
+                            <a class="t-cls link" href="https://join.skype.com/invite/rSCvsjoEE1bJ" target="_blank" rel="noopener noreferrer">Skype</a><span class="t-punc">,</span>
+                            <a class="t-cls link" href="mailto:jaang20@gmail.com" target="_blank" rel="noopener noreferrer">Mail</a>
+                            <span class="t-punc">}</span> <span class="t-kw">from</span> <span class="t-str">'@jom/socials'</span>
+                        </li>
+                    </ol>
+
+                    <div class="win-status">
                         <div class="social-media">
-                            <a href="https://www.facebook.com/joms.wick" target="_blank" class="icon-social-media">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://x.com/JomsWick" target="_blank" class="icon-social-media">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://www.instagram.com/joms.wick/" target="_blank" class="icon-social-media">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@joms.wick" target="_blank" class="icon-social-media">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
+                            <a href="https://www.linkedin.com/in/jomswick/" class="fa-brands fa-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"></a>
+                            <a href="https://github.com/JomsWick" class="fa-brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub"></a>
+                            <a href="https://join.skype.com/invite/rSCvsjoEE1bJ" class="fa-brands fa-skype" target="_blank" rel="noopener noreferrer" aria-label="Skype"></a>
+                            <a href="mailto:jaang20@gmail.com" class="fa-brands fa-telegram" target="_blank" rel="noopener noreferrer" aria-label="Mail"></a>
                         </div>
-                    </div>
-        
-                    <div class="back-btn-wrap">
-                        <a href="#" class="back-btn">
-                            <i class="fas fa-chevron-up"></i>
+
+                        <a href="docs/RESUME- Jomel A Ang.pdf" target="_blank" class="btn" id="view-cv">
+                            <span class="t-punc">&lt;</span>View CV<span class="t-punc">/&gt;</span>
                         </a>
                     </div>
                 </div>
+
+                <div class="window photo-window reveal">
+                    <div class="win-bar">
+                        <span class="win-dots"><i></i><i></i><i></i></span>
+                        <span class="win-title">me.png</span>
+                    </div>
+                    <div class="win-body photo-body">
+                        <img src="img/Ang, Jomel A.png" alt="Jomel A. Ang">
+                    </div>
+                    <div class="win-status">
+                        <span class="t-com">PNG</span>
+                        <span class="t-com">100%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider" aria-hidden="true"><span>about.md</span></div>
+
+        <!-- ============================ ABOUT ============================ -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="heading"><span class="t-com">//</span> About <span class="accent">Me</span></h2>
+
+                <div class="about-grid">
+                    <div class="window about-photo reveal">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">jom2.jpg</span>
+                        </div>
+                        <div class="win-body photo-body">
+                            <img src="img/Jom2.jpg" alt="joms-grad-pictorial">
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">JPG</span>
+                            <span class="t-com">graduation</span>
+                        </div>
+                    </div>
+
+                    <div class="window about-window reveal">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">about.md</span>
+                            <span class="win-meta">Markdown</span>
+                        </div>
+
+                        <div class="win-body md">
+                            <h3 class="md-h"><span class="t-punc">#</span> 🚀 Hello, I'm Joms — Where Creativity Meets Functionality!</h3>
+                            <p>Welcome to my digital playground, where I wear multiple hats - Web Developer, UI/UX
+                                Designer, Graphic Designer, and Web Designer. I'm on a mission to craft seamless,
+                                visually striking digital experiences that resonate and inspire.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 💻 Web Development</h4>
+                            <p>In the realm of web development, I bring ideas to life through code, ensuring
+                                functionality is as robust as it is seamless. Whether it's HTML, CSS, JavaScript, or
+                                diving into the latest frameworks, I thrive on turning concepts into interactive
+                                realities.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 🎨 Graphic &amp; Web Design</h4>
+                            <p>My passion extends to the visual realm, where I specialize in graphic and web design.
+                                From creating captivating visuals to designing intuitive user interfaces, every project
+                                is a canvas for innovation and creativity.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 🌐 UI/UX Design</h4>
+                            <p>User experience is at the core of what I do. Designing interfaces that not only look good
+                                but also feel intuitive and user-friendly is my forte. I'm dedicated to enhancing the
+                                journey users embark on when interacting with digital platforms.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 🎓 Continuous Learning</h4>
+                            <p>In this ever-evolving landscape, I am committed to staying at the forefront of design and
+                                technology trends. Continuous learning isn't just a habit; it's a necessity in
+                                delivering cutting-edge solutions.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 📸 Beyond the Screen</h4>
+                            <p>When I'm not immersed in pixels and lines of code, you'll find me playing online games.</p>
+
+                            <h4 class="md-h"><span class="t-punc">##</span> 🤝 Let's Create Together</h4>
+                            <p>Whether you're a business looking to establish a strong online presence, a fellow
+                                designer seeking collaboration, or someone with a vision waiting to be brought to life,
+                                let's connect and turn ideas into digital masterpieces!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider" aria-hidden="true"><span>skills.json</span></div>
+
+        <!-- ============================ SKILLS ============================ -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="heading"><span class="t-com">//</span> My <span class="accent">Skills</span></h2>
+
+                <div class="skills-grid">
+                    <div class="window skills-box reveal">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">web-development.js</span>
+                        </div>
+                        <div class="skill-head">
+                            <i class="fa fa-code"></i>
+                            <h3>Web Development 🖥️</h3>
+                        </div>
+                        <ol class="code">
+                            <li><span class="t-com">/**</span></li>
+                            <li class="i-star"><span class="t-com">*</span> <span class="t-com wrapped">Transforming Ideas into Interactive Experiences. From dynamic websites to powerful web applications, I specialize in:</span></li>
+                            <li class="i-star"><span class="t-com">*/</span></li>
+                            <li><span class="t-kw">export const</span> <span class="t-cls">webDev</span> <span class="t-punc">= {</span></li>
+                            <li class="i1"><span class="t-tag">'Front-End Development'</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">'Crafting seamless user interfaces using HTML, CSS, and JavaScript.'</span><span class="t-punc">,</span></li>
+                            <li class="i1"><span class="t-tag">'Back-End Development'</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">'Building robust and scalable server-side logic and databases.'</span><span class="t-punc">,</span></li>
+                            <li class="i1"><span class="t-tag">'Full-Stack Development'</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">'Bridging the gap between user experience and server functionality.'</span><span class="t-punc">,</span></li>
+                            <li><span class="t-punc">}</span></li>
+                        </ol>
+                    </div>
+
+                    <div class="window skills-box reveal">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">design.css</span>
+                        </div>
+                        <div class="skill-head">
+                            <i class="fa fa-paint-brush"></i>
+                            <h3>Web &amp; Graphic Design 🎨</h3>
+                        </div>
+                        <ol class="code">
+                            <li><span class="t-com">/**</span></li>
+                            <li class="i-star"><span class="t-com">*</span> <span class="t-com wrapped">Bringing Visuals to Life with a Creative Touch. In the world of design, I offer:</span></li>
+                            <li class="i-star"><span class="t-com">*/</span></li>
+                            <li><span class="t-cls">.design</span> <span class="t-punc">{</span></li>
+                            <li class="i1"><span class="t-tag">web-design</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">Crafting visually appealing layouts and structures for optimal user engagement</span><span class="t-punc">;</span></li>
+                            <li class="i1"><span class="t-tag">graphic-design</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">Creating stunning visuals for branding, marketing collateral, and digital platforms</span><span class="t-punc">;</span></li>
+                            <li class="i1"><span class="t-tag">print-design</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">Designing materials that leave a lasting impression, from business cards to brochures</span><span class="t-punc">;</span></li>
+                            <li><span class="t-punc">}</span></li>
+                        </ol>
+                    </div>
+
+                    <div class="window skills-box reveal">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">ui-ux.json</span>
+                        </div>
+                        <div class="skill-head">
+                            <i class="fa fa-tools"></i>
+                            <h3>UI/UX Design 🌐</h3>
+                        </div>
+                        <ol class="code">
+                            <li><span class="t-com">/**</span></li>
+                            <li class="i-star"><span class="t-com">*</span> <span class="t-com wrapped">Crafting Intuitive and User-Centric Experiences. For a seamless user journey, I specialize in:</span></li>
+                            <li class="i-star"><span class="t-com">*/</span></li>
+                            <li><span class="t-punc">{</span></li>
+                            <li class="i1"><span class="t-tag">"UI Design"</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">"Creating visually pleasing and responsive user interfaces."</span><span class="t-punc">,</span></li>
+                            <li class="i1"><span class="t-tag">"UX Design"</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">"Ensuring a user-centric approach to enhance overall user satisfaction."</span><span class="t-punc">,</span></li>
+                            <li class="i1"><span class="t-tag">"Prototyping &amp; Wireframing"</span><span class="t-punc">:</span></li>
+                            <li class="i2"><span class="t-str wrapped">"Visualizing and refining concepts before development."</span></li>
+                            <li><span class="t-punc">}</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true"><span>portfolio.tsx</span></div>
+        <!-- ============================ PORTFOLIO ============================ -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <h2 class="heading"><span class="t-com">//</span> Latest <span class="accent">Work</span></h2>
+
+                <div class="filter-bar" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter active" data-filter="all" aria-pressed="true">
+                        <span class="t-punc">*</span> all <span class="filter-count">6</span>
+                    </button>
+                    <button type="button" class="filter" data-filter="ui-ux" aria-pressed="false">
+                        <span class="t-punc">*</span> ui-ux <span class="filter-count">2</span>
+                    </button>
+                    <button type="button" class="filter" data-filter="graphic" aria-pressed="false">
+                        <span class="t-punc">*</span> graphic <span class="filter-count">2</span>
+                    </button>
+                    <button type="button" class="filter" data-filter="branding" aria-pressed="false">
+                        <span class="t-punc">*</span> branding <span class="filter-count">2</span>
+                    </button>
+                </div>
+
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <article class="window portfolio-box reveal" data-category="ui-ux">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">vintesse-ui-ux.fig</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/Vintesse UI UX Figma.jpg" alt="Vintesse UI/UX Figma project">
+                            <div class="portfolio-layer">
+                                <h4>UI/UX Design <br />Web Design</h4>
+                                <p>Seamlessly combines aesthetics and functionality, ensuring visually captivating
+                                    interfaces, intuitive navigation, and engaging interactions that prioritize user
+                                    satisfaction and brand identity.</p>
+                                <a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank" rel="noopener noreferrer" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// ui/ux</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+
+                    <article class="window portfolio-box reveal" data-category="ui-ux">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">gold-trading-app.fig</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/Image from Figma Compilation.jpg" alt="Mobile app design compilation">
+                            <div class="portfolio-layer">
+                                <h4>UI/UX Design <br /> Mobile App Design</h4>
+                                <p>Seamlessly combines form and function, providing visually compelling interfaces with
+                                    intuitive navigation and user-centric layouts. Crafted for optimal user experiences
+                                    across various devices, it reflects meticulous attention to brand aesthetics and
+                                    prioritizes accessibility and usability.</p>
+                                <a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// mobile</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+
+                    <article class="window portfolio-box reveal" data-category="graphic">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">business-card.psd</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/Business Card JA.jpg" alt="Business card design">
+                            <div class="portfolio-layer">
+                                <h4>Graphic Design</h4>
+                                <p>It is an artistic representation, skillfully blending color, typography, and imagery
+                                    to encapsulate a unique visual identity and convey contact information with flair,
+                                    leaving a lasting and memorable impression.</p>
+                                <a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// print</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+
+                    <article class="window portfolio-box reveal" data-category="branding">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">glossy-logo.psd</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/Glossy Logo Mockup JA.jpg" alt="Glossy logo mockup">
+                            <div class="portfolio-layer">
+                                <h4>Logo</h4>
+                                <p>is a visually striking representation, strategically crafted to symbolize a brand's
+                                    identity through artistry, shapes, colors, and typography. It serves as a powerful
+                                    and instantly recognizable communicator of brand values and uniqueness.</p>
+                                <a href="#portfolio" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// branding</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+
+                    <article class="window portfolio-box reveal" data-category="graphic">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">t-shirt-mockup.psd</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/T-Shirt MockUp_Back JA.jpg" alt="T-shirt mockup">
+                            <div class="portfolio-layer">
+                                <h4>T-Shirt</h4>
+                                <p>It is wearable art, creatively designed with color, imagery, and typography to turn a
+                                    blank canvas into a statement piece. It serves as a personal canvas for
+                                    self-expression, combining comfort with creativity and making a visual impact.</p>
+                                <a href="#portfolio" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// apparel</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+
+                    <article class="window portfolio-box reveal" data-category="branding">
+                        <div class="win-bar">
+                            <span class="win-dots"><i></i><i></i><i></i></span>
+                            <span class="win-title">3d-glass-logo.psd</span>
+                        </div>
+                        <div class="win-body preview">
+                            <img src="img/project/3D Glass Logo Mockup JA.jpg" alt="3D glass logo mockup">
+                            <div class="portfolio-layer">
+                                <h4>3D Glass Mockup</h4>
+                                <p>It is a preview, digitally or physically crafted, demonstrating how a design will
+                                    appear in its intended context. Through skillful manipulation of colors and layouts,
+                                    it provides a realistic representation, aiding effective decision-making for
+                                    designers and clients.</p>
+                                <a href="#portfolio" aria-label="Open project"><i class="fa fa-external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="win-status">
+                            <span class="t-com">// 3d</span>
+                            <span class="t-com">hover ▸ open</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" aria-hidden="true"><span>contact.js</span></div>
+
+        <!-- ============================ CONTACT ============================ -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="heading"><span class="t-com">//</span> Contact <span class="accent">Me</span></h2>
+
+                <div class="window contact-window reveal">
+                    <div class="win-bar">
+                        <span class="win-dots"><i></i><i></i><i></i></span>
+                        <span class="win-title">contact.js</span>
+                        <span class="win-meta">JavaScript</span>
+                    </div>
+
+                    <form action="#" id="contact-form" class="win-body form-body" novalidate>
+                        <p class="form-open"><span class="t-kw">const</span> <span class="t-cls">message</span> <span class="t-punc">= {</span></p>
+
+                        <div class="input-box">
+                            <label class="field">
+                                <span class="field-key">name<span class="t-punc">:</span></span>
+                                <input type="text" id="name" name="name" placeholder="'Your name'" required>
+                                <span class="field-error"></span>
+                            </label>
+                            <label class="field">
+                                <span class="field-key">email<span class="t-punc">:</span></span>
+                                <input type="email" id="email" name="email" placeholder="'you@mail.com'" required>
+                                <span class="field-error"></span>
+                            </label>
+                        </div>
+
+                        <div class="input-box">
+                            <label class="field">
+                                <span class="field-key">phone<span class="t-punc">:</span></span>
+                                <input type="tel" id="phone" name="phone" placeholder="'+63 ...'" required>
+                                <span class="field-error"></span>
+                            </label>
+                            <label class="field">
+                                <span class="field-key">subject<span class="t-punc">:</span></span>
+                                <input type="text" id="subject" name="subject" placeholder="'Project inquiry'" required>
+                                <span class="field-error"></span>
+                            </label>
+                        </div>
+
+                        <label class="field field-block">
+                            <span class="field-key">body<span class="t-punc">:</span></span>
+                            <textarea name="message" id="message" cols="30" rows="8" placeholder="`Your message...`"></textarea>
+                            <span class="field-error"></span>
+                        </label>
+
+                        <p class="form-close"><span class="t-punc">}</span></p>
+
+                        <button type="submit" class="btn btn-submit">
+                            <span class="t-punc">$</span> send<span class="t-punc">(</span>message<span class="t-punc">)</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content window">
+            <div class="win-bar">
+                <span class="win-dots"><i></i><i></i><i></i></span>
+                <span class="win-title">output</span>
+            </div>
+            <div class="win-body">
+                <p id="modal-message"></p>
+            </div>
+            <button class="close-button" type="button" aria-label="Close">&times;</button>
+        </div>
+    </div>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="window terminal">
+                <div class="win-bar">
+                    <span class="win-dots"><i></i><i></i><i></i></span>
+                    <span class="win-title">bash — jom@portfolio</span>
+                </div>
+
+                <div class="win-body grid-4">
+                    <div class="grid-4-col footer-about">
+                        <h3 class="title-sm"><span class="prompt">$</span> whoami</h3>
+                        <p class="text">Your website represents my service, and I'm here to elevate it.</p>
+                    </div>
+
+                    <div class="grid-4-col footer-links">
+                        <h3 class="title-sm"><span class="prompt">$</span> ls links/</h3>
+                        <ul>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#skills">services</a></li>
+                            <li><a href="#portfolio">portfolio</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-4-col footer-links">
+                        <h3 class="title-sm"><span class="prompt">$</span> ls services/</h3>
+                        <ul>
+                            <li><a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank" rel="noopener noreferrer">web-design</a></li>
+                            <li><a href="https://jomswick.github.io/" target="_blank" rel="noopener noreferrer">web-development</a></li>
+                            <li><a href="https://www.behance.net/gallery/189457809/Gold-Trading-Mobile-App-Design?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer">app-design</a></li>
+                            <li><a href="https://www.behance.net/gallery/189602597/Bannerfolio-2023?tracking_source=project_owner_other_projects" target="_blank" rel="noopener noreferrer">graphic-design</a></li>
+                            <li><a href="https://www.behance.net/gallery/189465813/Web-UIUX-Product-Design" target="_blank" rel="noopener noreferrer">ui-ux-design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="grid-4-col footer-newstletter">
+                        <h3 class="title-sm"><span class="prompt">$</span> subscribe --email</h3>
+                        <p class="text">Subscribe to my website and stay updated with the latest news, offers, and
+                            insights!</p>
+                        <div class="footer-input-wrap">
+                            <input type="email" class="footer-input" placeholder="you@mail.com" aria-label="Email">
+                            <a href="#" class="input-arrow" aria-label="Subscribe"><i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-prompt" aria-hidden="true">
+                    <span class="prompt">$</span> <span class="term-cursor">▍</span>
+                </div>
+
+                <div class="bottom-footer win-status">
+                    <div class="copyright">
+                        <p class="text">
+                            <span class="t-com">// Copyright &copy; 2023 All Rights Reserved | Edited by</span>
+                            <span class="split-text" data-text="FORUM"><a href="https://www.threads.net/@joms.wick" target="_blank" rel="noopener noreferrer">ᴊᴏᴍ</a></span>
+                        </p>
+                    </div>
+
+                    <div class="followme-wrap">
+                        <div class="followme">
+                            <h3>follow</h3>
+                            <span class="footer-line"></span>
+                            <div class="social-media">
+                                <a href="https://www.facebook.com/joms.wick" target="_blank" rel="noopener noreferrer" class="icon-social-media" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/JomsWick" target="_blank" rel="noopener noreferrer" class="icon-social-media" aria-label="X"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/joms.wick/" target="_blank" rel="noopener noreferrer" class="icon-social-media" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.tiktok.com/@joms.wick" target="_blank" rel="noopener noreferrer" class="icon-social-media" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="back-btn-wrap">
+                            <a href="#home" class="back-btn" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- <div class="footer-text">
-            <p>Copyright &copy; 2024 by ᴊᴏᴍ | All Rights Reserved.</p>
-        </div>
-
-        <div class="footer-iconTop">
-            <a href="#home"><i class="fas fa-arrow-alt-circle-up"></i></a>
-        </div> -->
     </footer>
 
-    <script src="script.js"></script>
+    <button id="to-top" class="to-top" type="button" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <!-- editor status bar -->
+    <div class="statusbar">
+        <div class="status-group">
+            <span class="status-item"><i class="fa fa-code-branch"></i> main</span>
+            <span class="status-item" id="status-problems"><i class="fa fa-circle-check"></i> <span id="problem-count">0</span> problems</span>
+        </div>
+        <div class="status-group status-right">
+            <span class="status-item" id="status-file">home.js</span>
+            <span class="status-item" id="status-progress">0%</span>
+            <span class="status-item hide-sm">Spaces: 2</span>
+            <span class="status-item hide-sm">UTF-8</span>
+            <span class="status-item hide-sm">LF</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
