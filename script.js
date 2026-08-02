@@ -40,32 +40,11 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
-    /* ---------------------- mobile tab menu ---------------------- */
-    const menuIcon = document.getElementById('menu-icon');
-    const navbar = document.querySelector('.navbar');
-
-    const closeMenu = () => {
-        if (!navbar || !menuIcon) return;
-        navbar.classList.remove('active');
-        menuIcon.classList.remove('open');
-        menuIcon.setAttribute('aria-expanded', 'false');
-    };
-
-    if (menuIcon && navbar) {
-        menuIcon.addEventListener('click', (event) => {
-            event.stopPropagation();
-            const open = navbar.classList.toggle('active');
-            menuIcon.classList.toggle('open', open);
-            menuIcon.setAttribute('aria-expanded', String(open));
-        });
-
-        navbar.querySelectorAll('.tab').forEach((tab) => tab.addEventListener('click', closeMenu));
-    }
-
     /* -------- sticky header, scroll spy, progress bar, status bar -------- */
     const header = document.querySelector('.header');
     const sections = Array.from(document.querySelectorAll('section[id]'));
-    const tabs = Array.from(document.querySelectorAll('.navbar .tab'));
+    /* the top tab bar and the mobile dock both mark the current section */
+    const tabs = Array.from(document.querySelectorAll('.navbar .tab, .dock-item'));
     const scrollBar = document.getElementById('scroll-bar');
     const statusFile = document.getElementById('status-file');
     const statusProgress = document.getElementById('status-progress');
@@ -75,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         home: 'home.js',
         about: 'about.md',
         skills: 'skills.json',
+        tools: 'package.json',
         portfolio: 'portfolio.tsx',
         contact: 'contact.js'
     };
@@ -185,15 +165,12 @@ document.addEventListener('DOMContentLoaded', function () {
     applyTheme(storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : 'dark');
 
     if (themeToggle) {
-        themeToggle.addEventListener('click', (event) => {
-            event.stopPropagation();
+        themeToggle.addEventListener('click', () => {
             const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
             applyTheme(next);
             try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked */ }
         });
     }
-
-    document.addEventListener('click', closeMenu);
 
     /* ---------------------- contact form (EmailJS) ---------------------- */
     const modal = document.getElementById('modal');

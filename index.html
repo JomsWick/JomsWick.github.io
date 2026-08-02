@@ -3,14 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ᴊᴏᴍ</title>
-    <link rel="apple-touch-icon" href="img/JA.jpg">
-    <link rel="icon" href="img/JA.jpg" type="image/x-icon">
-    <link rel="icon" href="img/JA.jpg" sizes="32x32" type="image/png">
-    <link rel="icon" href="img/JA.jpg" sizes="16x16" type="image/png">
+
+    <title>Jomel A. Ang — Web Developer &amp; UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Jomel A. Ang (Joms) — web developer, web designer, and UI/UX designer building fast, accessible, visually striking websites with HTML, CSS, and JavaScript.">
+    <meta name="author" content="Jomel A. Ang">
+    <link rel="canonical" href="https://jomswick.github.io/">
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f6f8fa" media="(prefers-color-scheme: light)">
+
+    <!-- open graph / twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jomswick.github.io/">
+    <meta property="og:site_name" content="Jomel A. Ang">
+    <meta property="og:title" content="Jomel A. Ang — Web Developer &amp; UI/UX Designer">
+    <meta property="og:description" content="Web developer, web designer, and UI/UX designer building fast, accessible, visually striking websites.">
+    <meta property="og:image" content="https://jomswick.github.io/img/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Code-editor card reading: const name = Jomel A. Ang, const role = Web Developer · UI/UX Designer">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@JomsWick">
+    <meta name="twitter:creator" content="@JomsWick">
+    <meta name="twitter:title" content="Jomel A. Ang — Web Developer &amp; UI/UX Designer">
+    <meta name="twitter:description" content="Web developer, web designer, and UI/UX designer building fast, accessible, visually striking websites.">
+    <meta name="twitter:image" content="https://jomswick.github.io/img/og-cover.png">
+
+    <!-- icons -->
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jomel A. Ang",
+      "alternateName": "Joms",
+      "url": "https://jomswick.github.io/",
+      "image": "https://jomswick.github.io/img/hero-jomel-1030.png",
+      "jobTitle": "Web Developer & UI/UX Designer",
+      "email": "mailto:jaang20@gmail.com",
+      "knowsAbout": ["Web Development", "Web Design", "UI/UX Design", "Graphic Design", "HTML", "CSS", "JavaScript"],
+      "sameAs": [
+        "https://github.com/JomsWick",
+        "https://www.linkedin.com/in/jomswick/",
+        "https://x.com/JomsWick",
+        "https://www.instagram.com/joms.wick/",
+        "https://www.facebook.com/joms.wick"
+      ]
+    }
+    </script>
 </head>
 <body>
     <a href="#home" class="skip-link">Skip to content</a>
@@ -78,7 +126,7 @@
         <div class="header-inner">
             <a href="#home" class="brand">
                 <span class="win-dots"><i></i><i></i><i></i></span>
-                <img src="img/JA.png" alt="" class="logo">
+                <img src="img/logo-56.png" srcset="img/logo-56.png 1x, img/logo-112.png 2x" width="56" height="45" alt="" class="logo">
                 <span class="brand-path">~/jomel-ang</span>
             </a>
 
@@ -86,6 +134,7 @@
                 <a href="#home" class="tab active"><i class="tab-dot js"></i>home.js</a>
                 <a href="#about" class="tab"><i class="tab-dot md"></i>about.md</a>
                 <a href="#skills" class="tab"><i class="tab-dot json"></i>skills.json</a>
+                <a href="#tools" class="tab"><i class="tab-dot pkg"></i>package.json</a>
                 <a href="#portfolio" class="tab"><i class="tab-dot tsx"></i>portfolio.tsx</a>
                 <a href="#contact" class="tab"><i class="tab-dot js"></i>contact.js</a>
             </nav>
@@ -96,9 +145,6 @@
                     <i class="fa-solid fa-moon icon-moon"></i>
                 </button>
 
-                <button id="menu-icon" class="menu-icon" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
             </div>
         </div>
 
@@ -168,7 +214,12 @@
                         <span class="win-title">me.png</span>
                     </div>
                     <div class="win-body photo-body">
-                        <img src="img/Ang, Jomel A.png" alt="Jomel A. Ang">
+                        <picture>
+                            <source type="image/webp" sizes="(max-width: 1023px) min(46rem, 100vw), (max-width: 1280px) 41vw, 515px"
+                                    srcset="img/hero-jomel-515.webp 515w, img/hero-jomel-1030.webp 1030w">
+                            <img src="img/hero-jomel-1030.png" width="1030" height="1030"
+                                 alt="Portrait of Jomel A. Ang" fetchpriority="high" decoding="async">
+                        </picture>
                     </div>
                     <div class="win-status">
                         <span class="t-com">PNG</span>
@@ -191,7 +242,12 @@
                             <span class="win-title">jom2.jpg</span>
                         </div>
                         <div class="win-body photo-body">
-                            <img src="img/Jom2.jpg" alt="joms-grad-pictorial">
+                            <picture>
+                                <source type="image/webp" sizes="(max-width: 1023px) min(46rem, 100vw), (max-width: 1280px) 39vw, 484px"
+                                        srcset="img/about-jomel-484.webp 484w, img/about-jomel-968.webp 968w">
+                                <img src="img/about-jomel-968.jpg" width="968" height="1452"
+                                     alt="Jomel A. Ang at his graduation" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="win-status">
                             <span class="t-com">JPG</span>
@@ -328,6 +384,88 @@
             </div>
         </section>
 
+        <div class="divider" aria-hidden="true"><span>package.json</span></div>
+
+        <!-- ============================ TOOLS ============================ -->
+        <section class="tools" id="tools">
+            <div class="container">
+                <h2 class="heading"><span class="t-com">//</span> My <span class="accent">Tools</span></h2>
+
+                <div class="window tools-window reveal">
+                    <div class="win-bar">
+                        <span class="win-dots"><i></i><i></i><i></i></span>
+                        <span class="win-title">package.json</span>
+                        <span class="win-meta">JSON</span>
+                    </div>
+
+                    <ol class="code tools-code">
+                        <li><span class="t-punc">{</span></li>
+
+                        <li class="i1"><span class="t-tag">"dependencies"</span><span class="t-punc">: {</span></li>
+
+                        <li class="i2 dep" style="--tool:#e34f26">
+                            <i class="fa-brands fa-html5" aria-hidden="true"></i><span class="t-tag">"html5"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^5.0.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// semantic markup &amp; a11y</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#1572b6">
+                            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span class="t-tag">"css3"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^3.0.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// layout, theming, motion</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#f7df1e">
+                            <i class="fa-brands fa-js" aria-hidden="true"></i><span class="t-tag">"javascript"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^es2023"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// interactivity, no jQuery</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#61dafb">
+                            <i class="fa-brands fa-react" aria-hidden="true"></i><span class="t-tag">"react"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^18.2.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// component-driven UIs</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#539e43">
+                            <i class="fa-brands fa-node-js" aria-hidden="true"></i><span class="t-tag">"node"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^20.11.0"</span>
+                            <span class="dep-note t-com">// server-side logic &amp; APIs</span>
+                        </li>
+
+                        <li class="i1"><span class="t-punc">},</span></li>
+
+                        <li class="i1"><span class="t-tag">"devDependencies"</span><span class="t-punc">: {</span></li>
+
+                        <li class="i2 dep" style="--tool:#f24e1e">
+                            <i class="fa-brands fa-figma" aria-hidden="true"></i><span class="t-tag">"figma"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^2024.1"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// wireframes &rarr; prototypes</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#31a8ff">
+                            <i class="fa-solid fa-layer-group" aria-hidden="true"></i><span class="t-tag">"photoshop"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^25.0.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// raster art &amp; mockups</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#ff9a00">
+                            <i class="fa-solid fa-pen-nib" aria-hidden="true"></i><span class="t-tag">"illustrator"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^28.0.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// logos &amp; vector marks</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#f05033">
+                            <i class="fa-brands fa-git-alt" aria-hidden="true"></i><span class="t-tag">"git"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^2.43.0"</span><span class="t-punc">,</span>
+                            <span class="dep-note t-com">// version control</span>
+                        </li>
+                        <li class="i2 dep" style="--tool:#007acc">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i><span class="t-tag">"vs-code"</span><span class="t-punc">:</span>
+                            <span class="t-str">"^1.86.0"</span>
+                            <span class="dep-note t-com">// where it all happens</span>
+                        </li>
+
+                        <li class="i1"><span class="t-punc">}</span></li>
+                        <li><span class="t-punc">}</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
         <div class="divider" aria-hidden="true"><span>portfolio.tsx</span></div>
         <!-- ============================ PORTFOLIO ============================ -->
         <section class="portfolio" id="portfolio">
@@ -356,7 +494,11 @@
                             <span class="win-title">vintesse-ui-ux.fig</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/Vintesse UI UX Figma.jpg" alt="Vintesse UI/UX Figma project">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/vintesse-ui-ux.webp">
+                                <img src="img/project/vintesse-ui-ux.jpg" width="900" height="600"
+                                     alt="Vintesse UI/UX Figma project" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>UI/UX Design <br />Web Design</h4>
                                 <p>Seamlessly combines aesthetics and functionality, ensuring visually captivating
@@ -377,7 +519,11 @@
                             <span class="win-title">gold-trading-app.fig</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/Image from Figma Compilation.jpg" alt="Mobile app design compilation">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/gold-trading-app.webp">
+                                <img src="img/project/gold-trading-app.jpg" width="900" height="600"
+                                     alt="Gold trading mobile app design compilation" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>UI/UX Design <br /> Mobile App Design</h4>
                                 <p>Seamlessly combines form and function, providing visually compelling interfaces with
@@ -399,7 +545,11 @@
                             <span class="win-title">business-card.psd</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/Business Card JA.jpg" alt="Business card design">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/business-card.webp">
+                                <img src="img/project/business-card.jpg" width="900" height="600"
+                                     alt="Business card design" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>Graphic Design</h4>
                                 <p>It is an artistic representation, skillfully blending color, typography, and imagery
@@ -420,7 +570,11 @@
                             <span class="win-title">glossy-logo.psd</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/Glossy Logo Mockup JA.jpg" alt="Glossy logo mockup">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/glossy-logo.webp">
+                                <img src="img/project/glossy-logo.jpg" width="900" height="600"
+                                     alt="Glossy logo mockup" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>Logo</h4>
                                 <p>is a visually striking representation, strategically crafted to symbolize a brand's
@@ -441,7 +595,11 @@
                             <span class="win-title">t-shirt-mockup.psd</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/T-Shirt MockUp_Back JA.jpg" alt="T-shirt mockup">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/t-shirt-mockup.webp">
+                                <img src="img/project/t-shirt-mockup.jpg" width="900" height="600"
+                                     alt="T-shirt mockup" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>T-Shirt</h4>
                                 <p>It is wearable art, creatively designed with color, imagery, and typography to turn a
@@ -462,7 +620,11 @@
                             <span class="win-title">3d-glass-logo.psd</span>
                         </div>
                         <div class="win-body preview">
-                            <img src="img/project/3D Glass Logo Mockup JA.jpg" alt="3D glass logo mockup">
+                            <picture>
+                                <source type="image/webp" srcset="img/project/3d-glass-logo.webp">
+                                <img src="img/project/3d-glass-logo.jpg" width="900" height="600"
+                                     alt="3D glass logo mockup" loading="lazy" decoding="async">
+                            </picture>
                             <div class="portfolio-layer">
                                 <h4>3D Glass Mockup</h4>
                                 <p>It is a preview, digitally or physically crafted, demonstrating how a design will
@@ -574,6 +736,7 @@
                         <ul>
                             <li><a href="#about">about</a></li>
                             <li><a href="#skills">services</a></li>
+                            <li><a href="#tools">tools</a></li>
                             <li><a href="#portfolio">portfolio</a></li>
                             <li><a href="#contact">contact</a></li>
                         </ul>
@@ -637,6 +800,28 @@
     <button id="to-top" class="to-top" type="button" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- floating bottom dock (replaces the hamburger on small screens) -->
+    <nav class="dock" aria-label="Sections">
+        <a href="#home" class="dock-item active">
+            <i class="fa-solid fa-house" aria-hidden="true"></i><span class="dock-label">Home</span>
+        </a>
+        <a href="#about" class="dock-item">
+            <i class="fa-solid fa-user" aria-hidden="true"></i><span class="dock-label">About</span>
+        </a>
+        <a href="#skills" class="dock-item">
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i><span class="dock-label">Skills</span>
+        </a>
+        <a href="#tools" class="dock-item">
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i><span class="dock-label">Tools</span>
+        </a>
+        <a href="#portfolio" class="dock-item">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i><span class="dock-label">Work</span>
+        </a>
+        <a href="#contact" class="dock-item">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i><span class="dock-label">Contact</span>
+        </a>
+    </nav>
 
     <!-- editor status bar -->
     <div class="statusbar">
